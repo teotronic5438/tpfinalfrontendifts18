@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.grid-container{
+    width: 1200px;
+    height: 600px;
+    /* outline: 2px solid; */
+    margin: 30px auto;
+    
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 450px 250px;
+    /* grid-template-rows: auto; */
+    
+
+
+    /* justify-items (alineación horizontal): start | end | center | stretch */
+    /* justify-items: center; */
+
+    /* align-items (alineación vertical): start | end | center | stretch | baseline */
+    /* align-items: center; */
+    
+    /* column-gap: 5px;
+    row-gap: 20px; */
+    gap: 0px;
+
+    grid-template-areas: 
+    "a a a"
+    "d e f"
+    ;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px; */
+}
+
+.grid-item{
+    /* width: 50px;
+    height: 170px;  */
+    color: black;
+    font-size: 1em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.furniture {
+    display: block;
+}
+
+.item1{
+    grid-area: a;
+    grid-column: 1/ span 3;
+    grid-row: 1/2;
+}
+
+.mainContainer{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+.mainDiv {
+    width: 55%;
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.mainText {
+    display: block;
+    text-align: center;
+    width: 45%;
+    background-color: white;
+}
+
+.mainText img{
+    width: 25px;
+    background-color: black;
+}
+
+.item2{
+    
+    /* grid-area: b; */
+    /* grid-column: 1/ span 1;
+    grid-row: 1/2; */
+    /* background-color: orange; */
+    /* background-image: url("../img/imagen2.jpg"); */
+}
+
+.item3{
+    
+    /* grid-area: a; */
+    /* grid-column: 3/ span 1; */
+    /* grid-row: 1/2; */
+    /* background-color: white; */
+    /* background-image: url("../images/image-about-dark.jpg"); */
+}
+
+.item4{
+    /* background-color: green; */
+    grid-area: d;
+    grid-column: 1/ span 1;
+    background-image: url("../images/image-about-dark.jpg");
+}
+
+.item5{
+    background-color: white;
+    grid-area: e;
+    grid-column: 2/ span 1;
+    /* background-image: url("../img/imagen5.jpg"); */
+}
+
+.item6{
+    background-color: gray;
+    grid-area: f;
+    grid-column: 3/ span 1;
+    background-image: url("../images/image-about-light.jpg");
+}
+/* 
+@media (max-width:800px){
+    .grid-container{
+        grid-template-areas: 
+        "main main main main main"
+        "main main main main main"
+        "side side side side side"
+        "side side side side side"
+        "footer footer footer footer footer";
+    }
+} */
